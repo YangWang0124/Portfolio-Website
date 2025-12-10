@@ -4,6 +4,7 @@ import styles from "./Experience.module.css";
 import skills from "../../data/skills.json";
 import history from "../../data/history.json";
 import { getImageUrl } from "../../utils";
+import { Reveal } from "../Reveal";
 
 export const Experience = () => {
   return (
@@ -11,21 +12,22 @@ export const Experience = () => {
       <h2 className={styles.title}>Experience</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
-          {skills.map((skill, id) => {
-            return (
-              <div key={id} className={styles.skill}>
+          {skills.map((skill, id) => (
+            <Reveal key={id} initialY={50} delay={0.1 * id}>
+              <div className={styles.skill}>
                 <div className={styles.skillImageContainer}>
                   <img src={getImageUrl(skill.imageSrc)} alt={skill.title} />
                 </div>
                 <p>{skill.title}</p>
               </div>
-            );
-          })}
+            </Reveal>
+          ))}
         </div>
+
         <ul className={styles.history}>
-          {history.map((historyItem, id) => {
-            return (
-              <li key={id} className={styles.historyItem}>
+          {history.map((historyItem, id) => (
+            <Reveal key={id} initialY={50} delay={0.2 * id}>
+              <li className={styles.historyItem}>
                 <img
                   src={getImageUrl(historyItem.imageSrc)}
                   alt={`${historyItem.organisation} Logo`}
@@ -34,14 +36,14 @@ export const Experience = () => {
                   <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
                   <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
                   <ul>
-                    {historyItem.experiences.map((experience, id) => {
-                      return <li key={id}>{experience}</li>;
-                    })}
+                    {historyItem.experiences.map((experience, expId) => (
+                      <li key={expId}>{experience}</li>
+                    ))}
                   </ul>
                 </div>
               </li>
-            );
-          })}
+            </Reveal>
+          ))}
         </ul>
       </div>
     </section>
