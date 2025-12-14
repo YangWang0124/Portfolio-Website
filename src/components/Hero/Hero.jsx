@@ -7,8 +7,8 @@ export const Hero = () => {
         <section className={styles.container}>
             <div className={styles.content}>
                 <h1 className={styles.title}>Hi, I'm Yang Wang</h1>
-                <p className={styles.description}>I am passionate about transforming ideas into creaLve technology and am pursuing a career in soNware development. With a background in graphic design and experience in Java, React and C#, I can turn design ideas into funcLonal soNware. I am reliable and hardworking, always delivering projects with responsibility. I am excited to join a team where I can leverage my skills and contribute to projects.</p>
-                <a href="mailto:yangwang02885215668@gmail.com" className={styles.contactBtn}>
+                <p className={styles.description}>I am passionate about turning ideas into meaningful digital experiences and building my career in software development. With a background in graphic design and hands-on experience in Java, React, and C#, I enjoy bridging creativity with technology to create clean, functional, and user-focused solutions. I am reliable, hardworking, and take pride in delivering high-quality work with care and responsibility.</p>
+                <a href="mailto:y6228725@gmail.com" className={styles.contactBtn}>
                     Contact Me</a>
             </div>
             <img src={getImageUrl("hero/heroImage.png")} 

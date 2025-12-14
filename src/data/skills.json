@@ -16,15 +16,43 @@
       "imageSrc": "skills/node.png"
     },
     {
-      "title": "GraphQL",
-      "imageSrc": "skills/graphql.png"
+      "title": "JavaScript",
+      "imageSrc": "skills/js.png"
     },
     {
       "title": "MongoDB",
       "imageSrc": "skills/mongodb.png"
     },
     {
-      "title": "Figma",
-      "imageSrc": "skills/figma.png"
+      "title": "TypeScript",
+      "imageSrc": "skills/typescript.png"
+    },
+    {
+      "title": "AWS",
+      "imageSrc": "skills/aws.png"
+    },
+    {
+      "title": "Java",
+      "imageSrc": "skills/java.png"
+    },
+    {
+      "title": "C#",
+      "imageSrc": "skills/cSharp.png"
+    },
+    {
+      "title": "Photoshop",
+      "imageSrc": "skills/ps.png"
+    },
+    {
+      "title": "Illustrator",
+      "imageSrc": "skills/ai.png"
+    },
+    {
+      "title": "AfterEffect",
+      "imageSrc": "skills/ae.png"
+    },
+    {
+      "title": "Indesign",
+      "imageSrc": "skills/id.png"
     }
   ]

@@ -28,8 +28,7 @@ export const About = () => {
               <div className={styles.aboutItemText}>
                 <h3>Frontend Developer</h3>
                 <p>
-                  Passionate about crafting intuitive user interfaces and
-                  solving design challenges.
+                Passionate about building intuitive and visually engaging user interfaces. I enjoy transforming design concepts into responsive, accessible, and polished frontend experiences.
                 </p>
               </div>
             </li>
@@ -45,8 +44,7 @@ export const About = () => {
               <div className={styles.aboutItemText}>
                 <h3>Backend Developer</h3>
                 <p>
-                  Passionate about solving backend challenges and ensuring
-                  reliable application functionality.
+                Experienced in developing reliable application logic and backend systems. I enjoy solving technical challenges and ensuring that applications run efficiently and securely.
                 </p>
               </div>
             </li>
@@ -56,14 +54,13 @@ export const About = () => {
             <li className={styles.aboutItem}>
               <img
                 className={styles.icon}
-                src={getImageUrl("about/icon2.png")}
+                src={getImageUrl("about/icon3.png")}
                 alt="Icon3"
               />
               <div className={styles.aboutItemText}>
                 <h3>Graphic Designer</h3>
                 <p>
-                  Skilled in translating clients' design concepts into practical
-                  function with a focus on performance and accessibility.
+                Skilled in turning creative ideas into visually compelling designs. With a strong foundation in layout, branding, and visual communication, I bring a design-focused approach to software development.
                 </p>
               </div>
             </li>
