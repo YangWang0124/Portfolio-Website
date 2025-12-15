@@ -1,6 +1,7 @@
 @import "../../vars.css";
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -8,6 +9,7 @@
   box-shadow: 0 16px 14px 0 #04152d;
   padding: 18px 24px;
   max-width: 345px;
+  height: 580px;
 }
 
 .image {
@@ -21,13 +23,14 @@
 
 .description {
   margin-top: 6px;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 400;
 }
 
 .skills {
+  position: absolute; 
+  top: 440px;
   width: 100%;
-  margin-top: 14px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,7 +39,7 @@
 }
 
 .skill {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 400;
   border-radius: 100px;
   background: var(--color-dark);
@@ -44,10 +47,11 @@
 }
 
 .links {
-  width: 100%;
-  margin-top: 26px;
+  position: absolute;
+  bottom: 18px; /* distance from bottom */
+  right: 18px;  /* distance from right */
   display: flex;
-  justify-content: space-around;
+  gap: 10px; /* space between links */
 }
 
 .link {

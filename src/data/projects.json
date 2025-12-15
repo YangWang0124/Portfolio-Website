@@ -1,26 +1,34 @@
 [
     {
-      "title": "Project A",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
+      "title": "Encrypt & Decrypt",
+      "imageSrc": "projects/p1.png",
+      "description": "Developed a Java-based encryption and decryption application with secure login and hashed passwords stored in AWS RDS (MySQL). Supports Caesar, DES, and AES encryption, GUI light/dark modes saved to the database, secure key and message storage, validation alerts, and configuration management via properties files.",
+      "skills": ["Java", "AWS", "Mysql"],
+      "demo": "https://www.example.com",
+      "source": "https://github.com/bnxdhjnsd/Security.git"
+    },
+    {
+      "title": "Event Manager",
+      "imageSrc": "projects/p2.png",
+      "description": "Developed an application for event and member management with an admin login system. Features include member, team, and event management (add, view, edit, delete), multi-window navigation using FXML, and dashboard guidance. Data is persisted using TXT files with BufferedReader/Writer, displayed via TableView and ListView, and updated in real time.",
+      "skills": ["Java", "MVC", "Git"],
+      "demo": "https://www.example.com",
+      "source": "https://github.com/bnxdhjnsd/SportMate"
+    },
+    {
+      "title": "Image Edit",
+      "imageSrc": "projects/p3.png",
+      "description": "Built an image editing component for a React and TypeScript project, enabling image upload, cropping, rotating, flipping, resizing, and quality adjustment. Integrated Google Drive uploads via Google APIs, added before-and-after previews, aspect-ratio–based resizing, and real-time visual feedback to deliver an intuitive, user-friendly editing experience.",
+      "skills": ["React", "HTML", "CSS", "API", "TypeScript"],
       "demo": "https://www.example.com",
       "source": "https://www.github.com"
     },
     {
-      "title": "Project B",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node", "Sass"],
+      "title": "CV Website",
+      "imageSrc": "projects/p4.png",
+      "description": "Built a responsive CV website with dynamic content rendering. Implemented local storage and MySQL for data persistence, including PDF preview and download. Added interactive features such as image enlargement, hover animations, iframe integration, looping background visuals, and a comment system with stored messages.",
+      "skills": ["React", "HTML", "CSS", "MySQL", "JavaScript"],
       "demo": "https://www.example.com",
-      "source": "https://www.github.com"
-    },
-    {
-      "title": "Project C",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "source": "https://github.com/YangWang0124/web"
     }
   ]
