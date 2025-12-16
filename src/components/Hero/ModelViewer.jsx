@@ -1,26 +1,41 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import * as THREE from "three";
 
 function LoadedModel({ url, rotation, isDragging }) {
   const ref = useRef();
+  const mixerRef = useRef(null);
   const { scene } = useThree();
 
   useEffect(() => {
     const loader = new GLTFLoader();
     loader.load(url, (gltf) => {
-      gltf.scene.position.y = -1.5;
-      gltf.scene.scale.set(10, 10, 10);
-      scene.add(gltf.scene);
-      ref.current = gltf.scene;
+      const model = gltf.scene;
+      model.position.y = -1.5;
+      model.scale.set(0.2, 0.2, 0.2);
+
+      scene.add(model);
+      ref.current = model;
+
+      if (gltf.animations && gltf.animations.length > 0) {
+        const mixer = new THREE.AnimationMixer(model);
+        gltf.animations.forEach((clip) => {
+          mixer.clipAction(clip).play();
+        });
+        mixerRef.current = mixer;
+      }
     });
   }, [url, scene]);
 
-  useFrame(() => {
+  useFrame((_, delta) => {
     if (!ref.current) return;
 
+    if (mixerRef.current) {
+      mixerRef.current.update(delta);
+    }
+
     if (!isDragging) {
-      // Auto-spin
       ref.current.rotation.y += 0.005;
     } else {
       ref.current.rotation.y = rotation.y;
@@ -64,10 +79,23 @@ export default function ModelViewer() {
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
     >
-      <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-        <LoadedModel url="/models/cat.gltf/concrete_cat_statue_4k.gltf" rotation={rotation} isDragging={isDragging}/>
+      <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+        <ambientLight intensity={1} color={0xffffff} />
+        <directionalLight
+          position={[5, 5, 5]}
+          intensity={1.5}
+          color={0xffffff}
+        />
+        <hemisphereLight
+          skyColor={0xffffff}
+          groundColor={0xaaaaaa}
+          intensity={0.5}
+        />
+        <LoadedModel
+          url="/models/lumen_64__computer.glb"
+          rotation={rotation}
+          isDragging={isDragging}
+        />
       </Canvas>
     </div>
   );

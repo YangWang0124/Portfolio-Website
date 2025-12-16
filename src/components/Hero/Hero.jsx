@@ -20,9 +20,10 @@ export const Hero = () => {
           Contact Me
         </a>
       </div>
-      <div className="w-full h-56 sm:h-80 md:h-[250px] lg:h-[250px] overflow-hidden">
-        <ModelViewer />
-      </div>
+      <div className="w-full max-w-[600px] aspect-[4/3] overflow-hidden">
+  <ModelViewer />
+</div>
+
       <div className={styles.topBlur} />
       <div className={styles.btmBlur} />
     </section>
