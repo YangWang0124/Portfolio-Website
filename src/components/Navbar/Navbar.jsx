@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <a className={`${styles.title} text-blue-400 hover:text-white transition-colors duration-300`} href="/">
-        Yang Wang
+      Portfolio
       </a>
       <div className={styles.menu}>
         <img

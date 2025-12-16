@@ -29,6 +29,13 @@
     -webkit-background-clip: text;
 }
 
+.name {
+    background: none !important;
+    -webkit-text-fill-color: #60a5fa !important;
+    -webkit-background-clip: unset !important;
+    color: #60a5fa;
+  }
+
 .description {
     font-size: 18px;
     font-family: var(--font-roboto);

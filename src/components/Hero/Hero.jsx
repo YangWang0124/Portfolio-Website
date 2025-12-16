@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm Yang Wang</h1>
+        <h1 className={styles.title}>Hi, I'm <span className={styles.name}>Yang Wang</span></h1>
         <p className={styles.description}>
           I am passionate about turning ideas into meaningful digital
           experiences and building my career in software development. With a
