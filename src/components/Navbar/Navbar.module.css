@@ -14,7 +14,6 @@
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-text);
 }
 
 .menu {
@@ -29,7 +28,6 @@
 
 .menuItems a {
     font-size: 25px;
-    color: var(--color-text);
     text-decoration: none;
 }
 
