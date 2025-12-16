@@ -67,7 +67,7 @@ export default function ModelViewer() {
       <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
-        <LoadedModel url="public/models/cat.gltf/concrete_cat_statue_4k.gltf" rotation={rotation} isDragging={isDragging}/>
+        <LoadedModel url="/models/cat.gltf/concrete_cat_statue_4k.gltf" rotation={rotation} isDragging={isDragging}/>
       </Canvas>
     </div>
   );
