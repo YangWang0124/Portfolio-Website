@@ -6,7 +6,9 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm <span className={styles.name}>Yang Wang</span></h1>
+        <h1 className={styles.title}>
+          Hi, I'm <span className={styles.name}>Yang Wang</span>
+        </h1>
         <p className={styles.description}>
           I am passionate about turning ideas into meaningful digital
           experiences and building my career in software development. With a
@@ -16,13 +18,35 @@ export const Hero = () => {
           and take pride in delivering high-quality work with care and
           responsibility.
         </p>
+
+        <p className={styles.project}>
+          <span className={styles.projectLabel}>Ongoing Project:</span>{" "}
+          <a
+            href="https://ai-ticketing-system-1-vvvb.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectLink}
+          >
+            Ticket System (Live API)
+          </a>
+          {" · "}
+          <a
+            href="https://github.com/YangWang0124/ai-ticketing-system"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectLink}
+          >
+            GitHub
+          </a>
+        </p>
+
         <a href="mailto:y6228725@gmail.com" className={styles.contactBtn}>
           Contact Me
         </a>
       </div>
       <div className="w-full max-w-[600px] aspect-[4/3] overflow-hidden">
-  <ModelViewer />
-</div>
+        <ModelViewer />
+      </div>
 
       <div className={styles.topBlur} />
       <div className={styles.btmBlur} />
